@@ -3,3 +3,9 @@ for after the tutorial
 expand scrolls
 create drop tables
 more enemies
+
+
+create a better main menu
+create character creation
+create classes
+create a story
