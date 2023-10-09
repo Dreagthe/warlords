@@ -3,9 +3,11 @@ for after the tutorial
 expand scrolls
 create drop tables
 more enemies
-
+bosses
 
 create a better main menu
 create character creation
 create classes
 create a story
+skill trees
+make a better color palette
