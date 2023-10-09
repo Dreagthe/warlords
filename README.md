@@ -41,9 +41,8 @@ Getting Started
 
 Controls
 
-[Provide a list of game controls or refer to the in-game help.]
-Credits
-
-[Credit any sources, inspirations, or assets used in the game.]
-
-Feel free to contribute and extend the game. Enjoy playing!
+    movement: numpad, arrowkeys
+    g:pick up items
+    x:look around
+    i:inventory
+    v:message log history

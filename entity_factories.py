@@ -1,5 +1,5 @@
 from components.ai import HostileEnemy
-from components.consumable import HealingConsumable
+from components import consumable
 from components.fighter import Fighter
 from components.inventory import Inventory
 from entity import Actor, Item
@@ -15,7 +15,7 @@ player = Actor(
 
 orc = Actor(
     char="o",
-    color=(63, 127, 63),
+    color=(0, 0, 0),
     name="Orc",
     ai_cls=HostileEnemy,
     fighter=Fighter(hp=10, defense=0, power=3),
@@ -23,7 +23,7 @@ orc = Actor(
 )
 troll = Actor(
     char="T",
-    color=(0, 127, 0),
+    color=(0, 0, 0),
     name="Troll",
     ai_cls=HostileEnemy,
     fighter=Fighter(hp=16, defense=1, power=4),
@@ -34,5 +34,26 @@ health_potion = Item(
     char="!",
     color=(127, 0, 255),
     name="Health Potion",
-    consumable=HealingConsumable(amount=4),
+    consumable=consumable.HealingConsumable(amount=4),
+)
+
+tar_lightning_scroll = Item(
+    char="~",
+    color=(0, 0, 255),
+    name="Lightning Scroll",
+    consumable=consumable.LightningDamageConsumable(damage=20, maximum_range=5),
+)
+
+tar_confusion_scroll = Item(
+    char="~",
+    color=(255, 100, 0),
+    name="Confusion Scroll",
+    consumable=consumable.ConfusionConsumable(number_of_turns=10),
+)
+
+area_fireball_scroll = Item(
+    char="~",
+    color=(255, 0, 0),
+    name="Fireball Scroll",
+    consumable=consumable.FireballDamageConsumable(damage=12, radius=3),
 )
